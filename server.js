@@ -37,7 +37,7 @@ app.get('/', async (req, res) => {
 
         var label = sources[i].label;
         var urnEnc = new Buffer.from(sources[i].file).toString('base64');
-        var file = '/videoPlayback?url='+urnEnc+'&cookie='+cookie;
+        let file = domain + '/videoPlayback?url=' + urnEnc + '&cookie=' + cookie;
 
         result.push({ file, label });
     }
