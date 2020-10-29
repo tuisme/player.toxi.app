@@ -1,6 +1,6 @@
 'use strict'
 
-const PORT = Number(process.env.PORT || 8888);
+const PORT = 3000;
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -37,7 +37,7 @@ app.get('/', async (req, res) => {
 
         var label = sources[i].label;
         var urnEnc = new Buffer.from(sources[i].file).toString('base64');
-        var file = '/videoplayback?url='+urnEnc+'&cookie='+cookie;
+        var file = domain+'/videdplayback?url='+urnEnc+'&cookie='+cookie;
         
         result.push({ file, label });
     }
@@ -45,7 +45,7 @@ app.get('/', async (req, res) => {
     return res.json(result)
 });
 
-app.get('/videoplayback', async (req, res) => {
+app.get('/videdplayback', async (req, res) => {
 
     var url = req.query.url || null;
     var cookie = req.query.cookie || null;
