@@ -37,7 +37,7 @@ app.get('/', async (req, res) => {
 
         var label = sources[i].label;
         var urnEnc = new Buffer.from(sources[i].file).toString('base64');
-        var file = domain+'/videdplayback?url='+urnEnc+'&cookie='+cookie;
+        var file = '/videoplayback?url='+urnEnc+'&cookie='+cookie;
         
         result.push({ file, label });
     }
@@ -45,7 +45,7 @@ app.get('/', async (req, res) => {
     return res.json(result)
 });
 
-app.get('/videdplayback', async (req, res) => {
+app.get('/videoplayback', async (req, res) => {
 
     var url = req.query.url || null;
     var cookie = req.query.cookie || null;
