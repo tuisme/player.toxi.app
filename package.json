@@ -1,0 +1,20 @@
+{
+  "name": "proxy-stream-drive-basic",
+  "version": "1.0.0",
+  "description": "Free",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node cluster.js"
+  },
+  "keywords": [],
+  "author": "ToiLaDev - https://www.facebook.com/dev.toila.9",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "querystring": "^0.2.0",
+    "request": "^2.88.2"
+  }
+}
